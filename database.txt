@@ -1,0 +1,130 @@
+
+creating a database =================================
+
+CREATE DATABASE user_information
+
+creating 3 table into the database ======================
+
+CREATE users table =======================
+
+CREATE TABLE users(
+
+    id int PRIMARY KEY,
+    username varchar(50) NOT NULL UNIQUE,
+    age int NOT NULL,
+    phone varchar(11) NOT NULL,
+    address varchar(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    
+    
+   
+)
+
+inerting single data on users table ===============================
+INSERT INTO users(username,age,phone,address) VALUES 
+('shakil',18,'0133234343','bazezid bostami')
+
+
+
+inserting multiple data on users table =====================
+INSERT INTO users(username,age,phone,address) VALUES 
+('shakil',18,'0133234343','bazezid bostami'),
+('rakib',11,'0133455343','bazezid bostami'),
+('rakib',11,'0133455343','bazezid bostami'),
+
+
+
+
+creating products table ==============================
+CREATE TABLE products(
+
+    id int PRIMARY KEY,
+    post_title varchar(255) NOT NULL ,
+    post_details TEXT NOT NULL,
+    post_file varchar(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP    
+    deleted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    
+    
+   
+)
+
+inserting single row data in products table =====================
+
+INSERT INTO products(post_title,post_details,post_file) VALUES ("Why Should you learn PHP","PHP is one of famous and easy programming language for backend development. It also going popular day by day.Carriers opportunity is great in this lanuage.It has a lot of framework like laravel,codignator","why should learn")
+
+
+inserting multiple row data in products table ============================
+
+INSERT INTO products(post_title,post_details,post_file) VALUES 
+
+("Why Should you learn PHP","PHP is one of famous and easy programming language for backend development. It also going popular day by day.Carriers opportunity is great in this lanuage.It has a lot of framework like laravel,codignator","why should learn"),
+
+("Why Should you learn PHP","PHP is one of famous and easy programming language for backend development. It also going popular day by day.Carriers opportunity is great in this lanuage.It has a lot of framework like laravel,codignator","why should learn"),
+
+
+
+creating comments table ============================
+
+CREATE TABLE comments(
+
+    id int PRIMARY KEY,
+    post_id int NOT NULL ,
+    comment TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,  
+    deleted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    
+)
+
+inserting single row data in products table ===========================
+
+INSERT INTO comments(post_id,comment) VALUES (1,"This post are very helpful");
+
+
+inserting single row data in products table ===============================
+
+INSERT INTO comments(post_id,comment) VALUES 
+
+(1,"This post are very helpful"),
+(2,"This post are very helpful"),
+
+
+
+Update data in users table ===============
+
+UPDATE users SET username = 'shawon',age =34,phone = 034343433,address= 'Dhaka Bangladesh' where id = 2; 
+
+
+delete data in users table ===============
+
+DELETE from users  where id = 1;
+
+
+Update data in products table ===============
+
+UPDATE products SET post_title = "mohammad shawon", post_details = "Mohammad shawon is good boy. He alawys try to learn something new in every moment",post_file = "cat.jpg" WHERE id = 1;  
+
+
+delete data in products table ===============
+
+DELETE from products where id = 1;
+
+
+
+Update data in comments table ===============
+
+UPDATE comments SET post_id = 1, comment = "wow nice post" where id = 1; 
+
+
+delete data in comments table ===============
+
+DELETE from users  where id = 1;
+
+
+
+
+
+

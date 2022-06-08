@@ -1,0 +1,41 @@
+Creating a Database called  information.===========================
+
+create database information
+
+creating first table name User===========================
+
+
+create table user(
+	user_id int NOT NULL PRIMARY KEY
+	user_name varchar(50) NOT NULL,
+	user_age int(2) NOT NULL,
+	city_id int NOT NULL
+	
+)
+creating user details table ===================================
+create table user_details(
+	city_id int NOT NULL PRIMARY KEY
+	city_name varchar(50) NOT NULL
+)
+
+Created two table  user and user_details and join both of them with inner join===============
+
+SELECT users.user_id,users.user_name,users.user_phone,users.age,user_details.city_name FROM users INNER JOIN 
+user_details on users.city_id = user_details.c_id; 
+
+Created two table  user and user_details and join both of them with right join=================
+
+SELECT users.user_id,users.user_name,users.user_phone,users.age,user_details.city_name FROM users RIGHT JOIN 
+user_details on users.city_id = user_details.c_id; 
+
+Created two table  user and user_details and join both of them with left join===============
+
+SELECT users.user_id,users.user_name,users.user_phone,users.age,user_details.city_name FROM users LEFT JOIN 
+user_details on users.city_id = user_details.c_id; 
+
+
+	Create two table  User and User_details and join both of them with inner join,
+
+	Left join , right join use sql query
+
+
